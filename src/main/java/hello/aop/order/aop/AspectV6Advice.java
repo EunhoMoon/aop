@@ -15,7 +15,8 @@ public class AspectV6Advice {
         try {
             // @Before
             log.info("[트랜잭션 시작] {}", joinPoint.getSignature());
-            Object result = joinPoint.proceed();    // Around에서는 무조건 joinPoint.proceed를 통해 target을 호출해주어야 한다.
+            Object result = joinPoint.proceed();
+            // Around에서는 무조건 joinPoint.proceed를 통해 target을 호출해주어야 한다.
             // @AfterReturning
             log.info("[트랜잭션 커밋] {}", joinPoint.getSignature());
             return result;
