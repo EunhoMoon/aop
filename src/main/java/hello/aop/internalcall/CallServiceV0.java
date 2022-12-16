@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class CallServiceVO {
+public class CallServiceV0 {
 
     public void external() {
         log.info("call external");
-        internal(); // 내부 클래스 호출(this.internal)
+        internal(); // 내부 클래스 호출(this.internal())
     }
 
     public void internal() {
